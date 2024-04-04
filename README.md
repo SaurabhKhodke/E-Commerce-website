@@ -56,7 +56,7 @@ Fill in the required address information and complete the purchase.
   *Description: Description of the third product.*
 
 ### Product Details
-![Product Details](E-CommerceWebsite_Html,css,js/assets/products_description.png)
+![Product Details](E-CommerceWebsite_Html,css,js/assets/product_description.png)
 *Description: Detailed view of a product including its name, brand, price, and description.*
 
 ### Shopping Cart
