@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.address-container {
+    width: 500px;
+    margin: auto;
+    padding-top: 250px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.address-container i {
+    color: rgb(5, 187, 5);
+    padding-bottom: 30px;
+    font-size: 10em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query */
+
+@media(max-width: 700px) {
+    .address-container i {
+        font-size: 8em;
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}

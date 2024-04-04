@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <title> SK Store </title>
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <!-- header links -->
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- slider links -->
+    <!-- <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script src="js/jQuery3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+    <!-- SLIDER -->
+    <div id="2"></div>
+    <script>
+        load("slider.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(2).innerHTML = req.responseText;
+        }
+    </script>
+
+<!-- MODAL -->
+<div class="modal" data-modal>
+    <!-- Modal content here -->
+    <div class="modal-close-overlay" data-modal-overlay></div>
+    <div class="modal-content">
+        <button class="modal-close-btn" data-modal-close>
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="newsletter-img">
+            <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
+        </div>
+        <div class="newsletter">
+            <form action="#">
+                <div class="newsletter-header">
+                    <h3 class="newsletter-title">Hey User</h3>
+                    <p class="newsletter-desc">Sign in to <b>SK Stores</b> to get the latest products and discount updates.</p>
+                </div>
+                <button type="button" onclick="window.location.href='signin.html'" class="btn-newsletter">Sign in</button>
+                <p class="not-account">Not an account?</p>
+                <button type="button" onclick="window.location.href='signup.html'" class="btn-newsletter">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- NOTIFICATION TOAST -->
+<div class="notification-toast" data-toast>
+    <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+    </button>
+    <div class="toast-banner">
+        <img src="https://m.media-amazon.com/images/I/81Fm0tRFdHL._SL1500_.jpg" alt="Apple MacBook M2" width="80" height="70">
+    </div>
+    <div class="toast-detail">
+        <p class="toast-message">Someone new just bought</p>
+        <p class="toast-title">Apple MacBook Air M2</p>
+        <p class="toast-meta"><time datetime="PT2M">2 Minutes</time> ago</p>
+    </div>
+</div>
+
+<script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let modalShown = false;
+        let toastShown = false;
+
+        const showModal = () => {
+            const modal = document.querySelector('[data-modal]');
+            modal.classList.remove('closed');
+            document.body.classList.add('modal-open');
+
+            const closeModal = () => {
+                modal.classList.add('closed');
+                document.body.classList.remove('modal-open');
+                modalShown = true;
+            };
+
+            const modalCloseBtn = document.querySelector('[data-modal-close]');
+            const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalCloseOverlay.addEventListener('click', closeModal);
+        };
+
+        const showNotificationToast = () => {
+            const notificationToast = document.querySelector('[data-toast]');
+            notificationToast.classList.remove('closed');
+
+            const closeToast = () => {
+                notificationToast.classList.add('closed');
+                toastShown = true;
+            };
+
+            const toastCloseBtn = document.querySelector('[data-toast-close]');
+            toastCloseBtn.addEventListener('click', closeToast);
+        };
+
+        if (!modalShown) {
+            showModal();
+        }
+
+        if (!toastShown) {
+            showNotificationToast();
+        }
+    });
+</script>
+
+
+    <!-- CONTENT SECTION -->
+    <div id="3"></div>
+    <script>
+        load("content.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(3).innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+
+</body>
+
+<!-- slider JS START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+    $('#containerSlider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        });
+    });
+</script>
+<!-- slider JS ENDS -->
+
+<!-- content JS -->
+<script src="content.js"></script>
+
+</html>
