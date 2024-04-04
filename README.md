@@ -41,30 +41,30 @@ Fill in the required address information and complete the purchase.
 ## Screenshots
 
 ### Homepage
-![Homepage](assets/slider.png)
+![Homepage](E-CommerceWebsite_Html,css,js/assets/slider.png)
 *Description: This screenshot shows the homepage of our e-commerce website, showcasing featured products.*
 
 ### Product
 
-- ![Product 1](assets/products1.png)
+- ![Product 1](E-CommerceWebsite_Html,css,js/assets/products1.png)
   *Description: Description of the first product.*
 
-- ![Product 2](assets/products2.png)
+- ![Product 2](E-CommerceWebsite_Html,css,js/assets/products2.png)
   *Description: Description of the second product.*
 
-- ![Product 3](assets/products3.png)
+- ![Product 3](E-CommerceWebsite_Html,css,js/assets/products3.png)
   *Description: Description of the third product.*
 
 ### Product Details
-![Product Details](assets/products_description.png)
+![Product Details](E-CommerceWebsite_Html,css,js/assets/products_description.png)
 *Description: Detailed view of a product including its name, brand, price, and description.*
 
 ### Shopping Cart
-![Shopping Cart](assets/cart.png)
+![Shopping Cart](E-CommerceWebsite_Html,css,js/assets/cart.png)
 *Description: Shopping cart displaying added items with options to update quantities and proceed to checkout.*
 
 ### Checkout Process
-![Checkout Process](assets/checkout_process.png)
+![Checkout Process](E-CommerceWebsite_Html,css,js/assets/checkout_process.png)
 *Description: User interface for entering address information and finalizing the purchase.*
 
 
